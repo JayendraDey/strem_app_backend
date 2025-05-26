@@ -8,17 +8,17 @@ const app = express();
 app.use(cors()); // ENABLE CORS for all routes
 
 export const videosObj = {
-  "Animal": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Animal.mp4",
-  "Cornelius": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Cornelius.mp4",
-  "Brasuca": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Brasuca.mp4",
-  "Musical": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Musical.mp4",
-  "Franchise": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Franchise.mp4",
-  "Rigs": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Rigs.mp4",
-  "CERVIDEO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/CERVIDEO.mp4",
-  "ECCO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/ECCO.mp4",
-  "Halloween": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Halloween.mp4",
-  "Kids": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Kids.mp4",
-  "Run": "C:/Users/Atin Dey/Desktop/PROGRAMMING/fullstack_task/streaming_tusk/backend/videos/Run.mp4",
+  "Animal": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Animal.mp4",
+  "Cornelius": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Cornelius.mp4",
+  "Brasuca": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Brasuca.mp4",
+  "Musical": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Musical.mp4",
+  "Franchise": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Franchise.mp4",
+  "Rigs": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Rigs.mp4",
+  "CERVIDEO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/CERVIDEO.mp4",
+  "ECCO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/ECCO.mp4",
+  "Halloween": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Halloween.mp4",
+  "Kids": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Kids.mp4",
+  "Run": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Run.mp4",
 };
 
 app.get("/videos/:filename", (req, res) => {

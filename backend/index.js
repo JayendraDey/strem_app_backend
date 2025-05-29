@@ -1,6 +1,13 @@
 import express from "express";
 import fs from "fs";
+
+import path from "path";
 import cors from "cors"; // ADD THIS
+import { fileURLToPath } from "url";
+
+// __dirname setup for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const PORT = 3900;
 const app = express();
@@ -8,17 +15,17 @@ const app = express();
 app.use(cors()); // ENABLE CORS for all routes
 
 export const videosObj = {
-  "Animal": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Animal.mp4",
-  "Cornelius": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Cornelius.mp4",
-  "Brasuca": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Brasuca.mp4",
-  "Musical": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Musical.mp4",
-  "Franchise": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Franchise.mp4",
-  "Rigs": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Rigs.mp4",
-  "CERVIDEO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/CERVIDEO.mp4",
-  "ECCO": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/ECCO.mp4",
-  "Halloween": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Halloween.mp4",
-  "Kids": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Kids.mp4",
-  "Run": "C:/Users/Atin Dey/Desktop/PROGRAMMING/stram_app_backend/backend/videos/Run.mp4",
+  Animal: path.join(__dirname, "videos", "Animal.mp4"),
+  Cornelius: path.join(__dirname, "videos", "Cornelius.mp4"),
+  Brasuca: path.join(__dirname, "videos", "Brasuca.mp4"),
+  Musical: path.join(__dirname, "videos", "Musical.mp4"),
+  Franchise: path.join(__dirname, "videos", "Franchise.mp4"),
+  Rigs: path.join(__dirname, "videos", "Rigs.mp4"),
+  CERVIDEO: path.join(__dirname, "videos", "CERVIDEO.mp4"),
+  ECCO: path.join(__dirname, "videos", "ECCO.mp4"),
+  Halloween: path.join(__dirname, "videos", "Halloween.mp4"),
+  Kids: path.join(__dirname, "videos", "Kids.mp4"),
+  Run: path.join(__dirname, "videos", "Run.mp4"),
 };
 
 app.get("/videos/:filename", (req, res) => {
